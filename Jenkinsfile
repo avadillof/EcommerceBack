@@ -6,13 +6,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh './gradlew assemble'
+                sh 'mvn clean package spring-boot:repackage'
+                sh 'java -jar ./target/ ecommerce-0.0.1-SNAPSHOT.jar'
             }
-        }
-        stage('Test') {
-            steps {
-                sh './gradlew test'
-            }
-        }
+        }        
     }
 }
