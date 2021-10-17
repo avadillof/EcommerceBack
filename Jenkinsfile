@@ -15,7 +15,7 @@ pipeline {
             agent any
             steps {
               withSonarQubeEnv('sonar') {
-                sh 'mvn clean sonar:sonar -Dsonar.sources=src/main/java/ -Dsonar.java.binaries=target/classes'
+                sh 'mvn clean sonar:sonar -Dsonar.sources=src/main/java/ -Dsonar.java.binaries=target'
               }
             }
         }    
