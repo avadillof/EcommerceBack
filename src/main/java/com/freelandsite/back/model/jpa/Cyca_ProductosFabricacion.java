@@ -20,15 +20,24 @@ public class Cyca_ProductosFabricacion {
 	
 	
 	@Column(name="`Precio Coste Material`")
-	private double precioventa;
+	private double preciocostemateria;
 	
+	@Column(name="`Precio Coste Mecanizado`")
+	private double preciocostemecanizado;
 	
-	public double getPrecioventa() {
-		return precioventa;
+	public double getPreciocostemecanizado() {
+		return preciocostemecanizado;
 	}
-	public void setPrecioventa(double precioventa) {
-		this.precioventa = precioventa;
+	public void setPreciocostemecanizado(double preciocostemecanizado) {
+		this.preciocostemecanizado = preciocostemecanizado;
 	}
+	public double getPreciocostemateria() {
+		return preciocostemateria;
+	}
+	public void setPreciocostemateria(double preciocostemateria) {
+		this.preciocostemateria = preciocostemateria;
+	}
+	
 	public Integer getId() {
 		return id;
 	}
